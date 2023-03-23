@@ -8,37 +8,14 @@ import DesignIcon from '../assets/icon-design.svg'
 import PhotoIcon from '../assets/icon-photography.svg'
 import styled from 'styled-components'
 import TitleCard from './TitleCard'
-
-const StyledFeatures = styled.div`
-   > div > div {
-    background-color: #f5f5f5;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 4%
-   };
-    > div > div > div{
-      flex-basis: 100%;
-    };
-    @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
-      > div > div > div{
-        flex-basis: 48%;
-      };
-    };
-
-    @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
-      > div > div > div{
-        flex-basis: 30%;
-      };
-
-    `
-
+import Grid from './Grid'
+const StyledFeatures = styled.div``
 
 function Features({children}) {
   return (
     <StyledFeatures>
     <Container>
-      <div>
+        <Grid>
         <TitleCard
           title='Check out our most popular courses!'
         />
@@ -72,7 +49,8 @@ function Features({children}) {
           link='Get Started'
           iconSrc={BusinessIcon}
         />
-      </div>
+
+        </Grid>
     </Container>
     </StyledFeatures>
   )
